@@ -19,11 +19,7 @@ import {
 
 const navigation = [
   { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
-  { name: 'Experiences', href: '/admin/experiences', icon: Briefcase },
-  { name: 'Education', href: '/admin/education', icon: GraduationCap },
-  { name: 'Projects', href: '/admin/projects', icon: FileText },
-  { name: 'Awards', href: '/admin/awards', icon: Award },
-  { name: 'Skills', href: '/admin/skills', icon: UserCheck },
+  { name: 'Content Management', href: '/admin/content', icon: FileText },
   { name: 'Media Library', href: '/admin/media', icon: Image },
   { name: 'AI Resume Builder', href: '/admin/resume', icon: Brain },
   { name: 'Website Content', href: '/admin/website', icon: Globe },

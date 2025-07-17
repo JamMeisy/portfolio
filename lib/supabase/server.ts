@@ -2,8 +2,12 @@ import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { Database } from './database.types';
 
-export function createServerSupabaseClient() {
-  const cookieStore = cookies();
+export async function createClient() {
+  return await createServerSupabaseClient();
+}
+
+export async function createServerSupabaseClient() {
+  const cookieStore = await cookies();
   
   return createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -25,7 +29,7 @@ export function createServerSupabaseClient() {
 }
 
 export async function getPublicExperiences() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   
   const { data, error } = await supabase
     .from('experiences')
@@ -42,7 +46,7 @@ export async function getPublicExperiences() {
 }
 
 export async function getWebsiteContent() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   
   const { data, error } = await supabase
     .from('website_content')
@@ -58,7 +62,7 @@ export async function getWebsiteContent() {
 }
 
 export async function getPersonalInfo() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   
   const { data, error } = await supabase
     .from('personal_info')
@@ -74,7 +78,7 @@ export async function getPersonalInfo() {
 }
 
 export async function getPublicEducation() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   
   const { data, error } = await supabase
     .from('education')
@@ -91,7 +95,7 @@ export async function getPublicEducation() {
 }
 
 export async function getPublicProjects() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   
   const { data, error } = await supabase
     .from('projects')
@@ -108,7 +112,7 @@ export async function getPublicProjects() {
 }
 
 export async function getPublicAwards() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   
   const { data, error } = await supabase
     .from('awards')
@@ -125,7 +129,7 @@ export async function getPublicAwards() {
 }
 
 export async function getPublicSkills() {
-  const supabase = createServerSupabaseClient();
+  const supabase = await createServerSupabaseClient();
   
   const { data, error } = await supabase
     .from('skills')

@@ -1,0 +1,356 @@
+{
+  "personalInfo": {
+    "id": "1",
+    "name": "John Doe",
+    "title": "Full Stack Developer",
+    "headline": "Full Stack Developer & AI Enthusiast",
+    "bio": "I craft digital experiences that bridge creativity and functionality. Specializing in modern web technologies and AI-powered applications with a passion for creating meaningful digital solutions.",
+    "location": "San Francisco, CA",
+    "email": "hello@johndoe.dev",
+    "phone": "+1 (555) 123-4567",
+    "profile_image_url": "/images/profile.jpg",
+    "cover_image_url": "/images/cover.jpg",
+    "social_links": {
+      "github": "https://github.com/johndoe",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "twitter": "https://twitter.com/johndoe",
+      "website": "https://johndoe.dev"
+    },
+    "updated_at": "2024-01-15T10:30:00Z"
+  },
+  "contentEntities": [
+    {
+      "id": "1",
+      "entity_type": "work",
+      "title": "Senior Full Stack Developer",
+      "organization": "TechCorp Inc.",
+      "location": "San Francisco, CA",
+      "start_date": "2022-01-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Leading the development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and architecting solutions for complex business requirements.",
+      "short_description": "Leading full stack development and team mentoring at a growing tech company.",
+      "skills": ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL"],
+      "technologies": ["React", "Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "AWS", "Docker"],
+      "achievements": [
+        "Reduced application load time by 40% through optimization",
+        "Led migration to microservices architecture",
+        "Mentored 3 junior developers to mid-level positions"
+      ],
+      "urls": {
+        "company": "https://techcorp.com"
+      },
+      "display_order": 1,
+      "is_featured": true,
+      "is_visible": true,
+      "resume_priority": 9,
+      "tags": ["full-stack", "leadership", "react", "node.js"],
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "entity_type": "project",
+      "title": "AI-Powered Portfolio Website",
+      "organization": "Personal Project",
+      "location": "Remote",
+      "start_date": "2024-01-01",
+      "end_date": "2024-01-15",
+      "is_current": false,
+      "description": "Built a comprehensive portfolio website with AI-powered resume generation, content management system, and static site generation. Features include LinkedIn-style content entities, drag-and-drop media management, and LangChain.js integration for intelligent resume tailoring.",
+      "short_description": "Full-stack portfolio website with AI resume generation and CMS.",
+      "skills": ["React", "Next.js", "TypeScript", "AI", "LangChain.js"],
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "LangChain.js", "OpenAI", "Framer Motion"],
+      "achievements": [
+        "Built comprehensive CMS with 10+ content entity types",
+        "Integrated AI resume generation with 90% accuracy",
+        "Achieved 95+ Lighthouse score for performance"
+      ],
+      "urls": {
+        "github": "https://github.com/johndoe/portfolio",
+        "live": "https://johndoe.dev"
+      },
+      "display_order": 1,
+      "is_featured": true,
+      "is_visible": true,
+      "resume_priority": 8,
+      "tags": ["ai", "portfolio", "cms", "next.js"],
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "3",
+      "entity_type": "education",
+      "title": "Bachelor of Science in Computer Science",
+      "organization": "University of California, Berkeley",
+      "location": "Berkeley, CA",
+      "start_date": "2018-08-01",
+      "end_date": "2022-05-01",
+      "is_current": false,
+      "description": "Comprehensive computer science education with focus on software engineering, algorithms, and system design. Graduated Magna Cum Laude with 3.8 GPA.",
+      "short_description": "Computer Science degree with focus on software engineering.",
+      "skills": ["Algorithms", "Data Structures", "System Design", "Software Engineering"],
+      "technologies": ["Java", "Python", "C++", "SQL", "Git"],
+      "achievements": [
+        "Graduated Magna Cum Laude (3.8 GPA)",
+        "Dean's List for 6 semesters",
+        "Teaching Assistant for Data Structures course"
+      ],
+      "urls": {
+        "university": "https://berkeley.edu"
+      },
+      "display_order": 1,
+      "is_featured": false,
+      "is_visible": true,
+      "resume_priority": 7,
+      "tags": ["education", "computer-science", "berkeley"],
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "4",
+      "entity_type": "certification",
+      "title": "AWS Solutions Architect Associate",
+      "organization": "Amazon Web Services",
+      "location": "Online",
+      "start_date": "2023-06-01",
+      "end_date": "2026-06-01",
+      "is_current": true,
+      "description": "Comprehensive certification covering AWS cloud architecture, security, and best practices for scalable applications.",
+      "short_description": "AWS cloud architecture certification with focus on scalability.",
+      "skills": ["AWS", "Cloud Architecture", "Security", "Scalability"],
+      "technologies": ["AWS", "EC2", "S3", "RDS", "Lambda", "CloudFormation"],
+      "achievements": [
+        "Passed with 85% score",
+        "Completed 40+ hours of study",
+        "Applied knowledge to production systems"
+      ],
+      "urls": {
+        "credential": "https://aws.amazon.com/certification/",
+        "verify": "https://aws.amazon.com/verification"
+      },
+      "display_order": 1,
+      "is_featured": true,
+      "is_visible": true,
+      "resume_priority": 6,
+      "tags": ["aws", "certification", "cloud", "architecture"],
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T10:30:00Z"
+    }
+  ],
+  "skills": [
+    {
+      "id": "1",
+      "name": "React",
+      "category": "framework",
+      "proficiency_level": 5,
+      "years_experience": 4,
+      "is_featured": true,
+      "is_visible": true,
+      "display_order": 1,
+      "endorsements": 25,
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "name": "TypeScript",
+      "category": "language",
+      "proficiency_level": 5,
+      "years_experience": 3,
+      "is_featured": true,
+      "is_visible": true,
+      "display_order": 2,
+      "endorsements": 20,
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Node.js",
+      "category": "runtime",
+      "proficiency_level": 4,
+      "years_experience": 4,
+      "is_featured": true,
+      "is_visible": true,
+      "display_order": 3,
+      "endorsements": 18,
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "4",
+      "name": "AWS",
+      "category": "cloud",
+      "proficiency_level": 4,
+      "years_experience": 2,
+      "is_featured": true,
+      "is_visible": true,
+      "display_order": 4,
+      "endorsements": 15,
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "5",
+      "name": "PostgreSQL",
+      "category": "database",
+      "proficiency_level": 4,
+      "years_experience": 3,
+      "is_featured": true,
+      "is_visible": true,
+      "display_order": 5,
+      "endorsements": 12,
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "6",
+      "name": "Next.js",
+      "category": "framework",
+      "proficiency_level": 5,
+      "years_experience": 2,
+      "is_featured": true,
+      "is_visible": true,
+      "display_order": 6,
+      "endorsements": 10,
+      "created_at": "2024-01-15T10:30:00Z"
+    }
+  ],
+  "contentByType": {
+    "work": [
+      {
+        "id": "1",
+        "entity_type": "work",
+        "title": "Senior Full Stack Developer",
+        "organization": "TechCorp Inc.",
+        "location": "San Francisco, CA",
+        "start_date": "2022-01-01",
+        "end_date": null,
+        "is_current": true,
+        "description": "Leading the development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and architecting solutions for complex business requirements.",
+        "short_description": "Leading full stack development and team mentoring at a growing tech company.",
+        "skills": ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL"],
+        "technologies": ["React", "Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "AWS", "Docker"],
+        "achievements": [
+          "Reduced application load time by 40% through optimization",
+          "Led migration to microservices architecture",
+          "Mentored 3 junior developers to mid-level positions"
+        ],
+        "urls": {
+          "company": "https://techcorp.com"
+        },
+        "display_order": 1,
+        "is_featured": true,
+        "is_visible": true,
+        "resume_priority": 9,
+        "tags": ["full-stack", "leadership", "react", "node.js"],
+        "created_at": "2024-01-15T10:30:00Z",
+        "updated_at": "2024-01-15T10:30:00Z"
+      }
+    ],
+    "projects": [
+      {
+        "id": "2",
+        "entity_type": "project",
+        "title": "AI-Powered Portfolio Website",
+        "organization": "Personal Project",
+        "location": "Remote",
+        "start_date": "2024-01-01",
+        "end_date": "2024-01-15",
+        "is_current": false,
+        "description": "Built a comprehensive portfolio website with AI-powered resume generation, content management system, and static site generation. Features include LinkedIn-style content entities, drag-and-drop media management, and LangChain.js integration for intelligent resume tailoring.",
+        "short_description": "Full-stack portfolio website with AI resume generation and CMS.",
+        "skills": ["React", "Next.js", "TypeScript", "AI", "LangChain.js"],
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "LangChain.js", "OpenAI", "Framer Motion"],
+        "achievements": [
+          "Built comprehensive CMS with 10+ content entity types",
+          "Integrated AI resume generation with 90% accuracy",
+          "Achieved 95+ Lighthouse score for performance"
+        ],
+        "urls": {
+          "github": "https://github.com/johndoe/portfolio",
+          "live": "https://johndoe.dev"
+        },
+        "display_order": 1,
+        "is_featured": true,
+        "is_visible": true,
+        "resume_priority": 8,
+        "tags": ["ai", "portfolio", "cms", "next.js"],
+        "created_at": "2024-01-15T10:30:00Z",
+        "updated_at": "2024-01-15T10:30:00Z"
+      }
+    ],
+    "education": [
+      {
+        "id": "3",
+        "entity_type": "education",
+        "title": "Bachelor of Science in Computer Science",
+        "organization": "University of California, Berkeley",
+        "location": "Berkeley, CA",
+        "start_date": "2018-08-01",
+        "end_date": "2022-05-01",
+        "is_current": false,
+        "description": "Comprehensive computer science education with focus on software engineering, algorithms, and system design. Graduated Magna Cum Laude with 3.8 GPA.",
+        "short_description": "Computer Science degree with focus on software engineering.",
+        "skills": ["Algorithms", "Data Structures", "System Design", "Software Engineering"],
+        "technologies": ["Java", "Python", "C++", "SQL", "Git"],
+        "achievements": [
+          "Graduated Magna Cum Laude (3.8 GPA)",
+          "Dean's List for 6 semesters",
+          "Teaching Assistant for Data Structures course"
+        ],
+        "urls": {
+          "university": "https://berkeley.edu"
+        },
+        "display_order": 1,
+        "is_featured": false,
+        "is_visible": true,
+        "resume_priority": 7,
+        "tags": ["education", "computer-science", "berkeley"],
+        "created_at": "2024-01-15T10:30:00Z",
+        "updated_at": "2024-01-15T10:30:00Z"
+      }
+    ],
+    "certifications": [
+      {
+        "id": "4",
+        "entity_type": "certification",
+        "title": "AWS Solutions Architect Associate",
+        "organization": "Amazon Web Services",
+        "location": "Online",
+        "start_date": "2023-06-01",
+        "end_date": "2026-06-01",
+        "is_current": true,
+        "description": "Comprehensive certification covering AWS cloud architecture, security, and best practices for scalable applications.",
+        "short_description": "AWS cloud architecture certification with focus on scalability.",
+        "skills": ["AWS", "Cloud Architecture", "Security", "Scalability"],
+        "technologies": ["AWS", "EC2", "S3", "RDS", "Lambda", "CloudFormation"],
+        "achievements": [
+          "Passed with 85% score",
+          "Completed 40+ hours of study",
+          "Applied knowledge to production systems"
+        ],
+        "urls": {
+          "credential": "https://aws.amazon.com/certification/",
+          "verify": "https://aws.amazon.com/verification"
+        },
+        "display_order": 1,
+        "is_featured": true,
+        "is_visible": true,
+        "resume_priority": 6,
+        "tags": ["aws", "certification", "cloud", "architecture"],
+        "created_at": "2024-01-15T10:30:00Z",
+        "updated_at": "2024-01-15T10:30:00Z"
+      }
+    ],
+    "volunteer": [],
+    "publications": [],
+    "awards": [],
+    "courses": [],
+    "organizations": []
+  },
+  "stats": {
+    "totalExperience": 4,
+    "totalProjects": 12,
+    "totalSkills": 25,
+    "totalCertifications": 3,
+    "githubStars": 45,
+    "contributedProjects": 8
+  }
+}

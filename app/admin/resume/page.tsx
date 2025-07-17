@@ -94,34 +94,41 @@ export default function AIResumeGeneratorPage() {
     });
 
     try {
-      // Simulate AI analysis
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Call AI analysis API
+      const response = await fetch('/api/admin/ai', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          jobDescription: formData.jobDescription,
+          targetCompany: formData.targetCompany,
+          targetRole: formData.targetRole,
+          additionalNotes: formData.additionalNotes
+        })
+      });
 
-      const mockJobAnalysis: JobAnalysis = {
-        requiredSkills: ['React', 'TypeScript', 'Node.js', 'AWS'],
-        preferredSkills: ['Next.js', 'GraphQL', 'Docker'],
-        seniorityLevel: 'senior',
-        companyValues: ['Innovation', 'Collaboration', 'Excellence'],
-        roleType: 'Frontend Development',
-        industry: 'Technology',
-        keyResponsibilities: ['Lead frontend development', 'Mentor junior developers', 'Architect scalable solutions']
-      };
+      if (!response.ok) {
+        throw new Error('AI analysis failed');
+      }
 
+      const aiResult = await response.json();
+      
       setGenerationState({
         step: 'generating',
         progress: 60,
         currentTask: 'Tailoring resume content to match job requirements...',
-        jobAnalysis: mockJobAnalysis
+        jobAnalysis: aiResult.jobAnalysis
       });
 
-      // Simulate resume generation
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      // Generate resume document
+      await new Promise(resolve => setTimeout(resolve, 2000));
 
       setGenerationState({
         step: 'complete',
         progress: 100,
         currentTask: 'Resume generated successfully!',
-        jobAnalysis: mockJobAnalysis
+        jobAnalysis: aiResult.jobAnalysis
       });
 
       // Add to recent generations
