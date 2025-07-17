@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* OKLCH Color System - Light Mode */
+    --background: oklch(98% 0.02 240);
+    --foreground: oklch(15% 0.02 240);
+    
+    /* Primary colors - Golden gradient */
+    --primary: oklch(75% 0.15 85); /* Golden yellow */
+    --primary-foreground: oklch(15% 0.02 240);
+    
+    /* Secondary colors - Blue gradient */
+    --secondary: oklch(70% 0.15 240); /* Blue */
+    --secondary-foreground: oklch(15% 0.02 240);
+    
+    /* Accent colors - Warm cream */
+    --accent: oklch(95% 0.05 85);
+    --accent-foreground: oklch(15% 0.02 240);
+    
+    /* Muted colors - Neutral grays */
+    --muted: oklch(85% 0.02 240);
+    --muted-foreground: oklch(50% 0.02 240);
+    
+    /* Glassmorphism colors */
+    --glass-bg: oklch(98% 0.02 240 / 0.6);
+    --glass-border: oklch(90% 0.02 240 / 0.3);
+    --glass-shadow: oklch(15% 0.02 240 / 0.1);
+    
+    /* shadcn/ui variables */
+    --border: oklch(90% 0.02 240);
+    --input: oklch(95% 0.02 240);
+    --ring: oklch(75% 0.15 85);
+    
+    --card: oklch(100% 0 0 / 0.8); /* Glass card */
+    --card-foreground: oklch(15% 0.02 240);
+    
+    --popover: oklch(100% 0 0 / 0.95);
+    --popover-foreground: oklch(15% 0.02 240);
+    
+    --destructive: oklch(65% 0.2 15);
+    --destructive-foreground: oklch(98% 0.02 240);
+    
+    --radius: 1rem;
+  }
+
+  @theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+  }
+
+  .dark {
+    /* OKLCH Color System - Dark Mode (Main Portfolio Theme) */
+    --background: oklch(12% 0.02 240); /* #181816 equivalent */
+    --foreground: oklch(95% 0.02 240); /* #e7e8ef equivalent */
+    
+    /* Primary colors - Golden gradient */
+    --primary: oklch(75% 0.15 85); /* Goldenrod */
+    --primary-foreground: oklch(12% 0.02 240);
+    
+    /* Secondary colors - Blue gradient */
+    --secondary: oklch(75% 0.15 240); /* Blue gradient */
+    --secondary-foreground: oklch(12% 0.02 240);
+    
+    /* Accent colors - Warm cream */
+    --accent: oklch(90% 0.05 85); /* Antiquewhite */
+    --accent-foreground: oklch(12% 0.02 240);
+    
+    /* Muted colors - Silver tones */
+    --muted: oklch(35% 0.02 240);
+    --muted-foreground: oklch(75% 0.02 240);
+    
+    /* Glassmorphism colors for dark theme */
+    --glass-bg: oklch(15% 0.02 240 / 0.3);
+    --glass-border: oklch(30% 0.02 240 / 0.3);
+    --glass-shadow: oklch(5% 0.02 240 / 0.3);
+    
+    /* UI components */
+    --border: oklch(25% 0.02 240);
+    --input: oklch(20% 0.02 240);
+    --ring: oklch(75% 0.15 85);
+    
+    --card: oklch(15% 0.02 240 / 0.6); /* Glass card dark */
+    --card-foreground: oklch(95% 0.02 240);
+    
+    --popover: oklch(15% 0.02 240 / 0.95);
+    --popover-foreground: oklch(95% 0.02 240);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+  }
+  
+  .glass-card {
+    @apply glass rounded-2xl;
+  }
+  
+  .glass-nav {
+    @apply glass rounded-full;
+  }
+  
+  .glass-button {
+    @apply glass rounded-xl transition-all duration-300 hover:bg-primary/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+  
+  .hero-gradient {
+    background: radial-gradient(ellipse at top, var(--primary) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, var(--secondary) 0%, transparent 50%),
+                var(--background);
+  }
+}
