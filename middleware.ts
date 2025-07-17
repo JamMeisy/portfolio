@@ -62,13 +62,13 @@ export async function middleware(request: NextRequest) {
 
   const isAuthRoute = request.nextUrl.pathname.startsWith('/admin')
   const isApiAuthRoute = request.nextUrl.pathname.startsWith('/api/admin')
-  const isLoginPage = request.nextUrl.pathname === '/admin/login'
+  const isLoginPage = request.nextUrl.pathname === '/login'
 
   // Handle admin page routes
   if (isAuthRoute && !isLoginPage) {
     if (!user || error) {
       // Redirect to login page if not authenticated
-      const loginUrl = new URL('/admin/login', request.url)
+      const loginUrl = new URL('/login', request.url)
       loginUrl.searchParams.set('redirect', request.nextUrl.pathname)
       return NextResponse.redirect(loginUrl)
     }

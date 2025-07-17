@@ -18,7 +18,7 @@ export default async function AdminLayout({
   } = await supabase.auth.getSession()
 
   if (!session) {
-    redirect('/admin/login')
+    redirect('/login')
   }
 
   return (
